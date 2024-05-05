@@ -23,18 +23,21 @@ const PickupDate = () => {
     },
   ]);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 767);
-    };
+    // Verifica se estamos no navegador antes de tentar acessar o window
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 767);
+      };
 
-    window.addEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   const handleDateChange = (rangesByKey: any) => {
@@ -86,4 +89,3 @@ const PickupDate = () => {
 };
 
 export default PickupDate;
-

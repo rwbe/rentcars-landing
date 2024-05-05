@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu } from "@headlessui/react";
 
 const locations = [
@@ -11,6 +11,11 @@ const locations = [
 
 const LocationSelection = () => {
   const [location, setLocation] = useState("Search your location");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 767);
+  }, []);
 
   return (
     <Menu as="div" className="w-full h-full flex flex-col xl:flex-row">
@@ -28,7 +33,7 @@ const LocationSelection = () => {
             </div>
           </div>
         </Menu.Button>
-        <Menu.Items className={`dropdown-menu shadow-lg absolute ${window.innerWidth <= 767 ? "-top-56" : "top-[90px]"} left-1/2 xl:left-0 z-10 transform -translate-x-1/2 xl:-translate-x-0 text-sm text-center xl:text-left w-full bg-white max-w-[332px] py-6 rounded-[10px] `}>
+        <Menu.Items className={`dropdown-menu shadow-lg absolute ${isMobile ? "-top-56" : "top-[90px]"} left-1/2 xl:left-0 z-10 transform -translate-x-1/2 xl:-translate-x-0 text-sm text-center xl:text-left w-full bg-white max-w-[332px] py-6 rounded-[10px] `}>
           {locations.map((locationOption, index) => {
             return (
               <div
