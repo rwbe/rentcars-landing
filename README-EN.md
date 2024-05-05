@@ -24,7 +24,7 @@ The Rentcars landing page was developed with the goal of presenting the car rent
 
 ## 🔗 Links 
 
-- ✨ The project can be viewed here: [Demo](https://www.rentcars-landing.netlify.com)
+- ✨ The project can be viewed here: [Demo](https://rentcars-landing.netlify.app/)
 - 🎨 Landing Page Prototype on Figma: [Here](https://www.figma.com/community/file/1343066637131946966/rent-car-landing-page)
 
 ## 💻 Technologies
