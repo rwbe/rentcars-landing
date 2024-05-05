@@ -1,0 +1,21 @@
+{
+  "detectedConfig": {
+    "typescript": true,
+    "naming": "Pascal Case",
+    "unit": "em",
+    "framework": "nextjs",
+    "styling": "'Inline Styles"
+  },
+  "locofyConfig": {
+    "project_name": "test",
+    "id": "654a57f8cf48d765b5157760",
+    "framework": "react-nextjs",
+    "typescript": true,
+    "path": "public/",
+    "componentsPath": "c:\\Users\\ROG STRIX\\Desktop\\car-rent\\app\\components",
+    "screensPath": "c:\\Users\\ROG STRIX\\Desktop\\car-rent\\src\\pages",
+    "styling": "Tailwind",
+    "unit": "em",
+    "naming": "Kebab Case"
+  }
+}
